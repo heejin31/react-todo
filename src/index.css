@@ -1,0 +1,72 @@
+:root {
+  --color-white: #fff;
+  --color-bg: #fdf9fc;
+  --color-bg-dark: #f8eaf7;
+  --color-gray: #e6e3e3;
+  --color-text: #575454;
+  --color-accent: #f76f6f;
+  --color-scrollbar: #ccc;
+}
+
+html.dark {
+  --color-bg: #22243b;
+  --color-bg-dark: #0f101a;
+  --color-text: #fdfffd;
+  --color-grey: #9c9898;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(188, 148, 233, 1) 100%
+  );
+}
+#root {
+  width: 100%;
+  max-width: 500px;
+  height: 60%;
+  background-color: var(--color-bg-dark);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+/*todo리스트 스크롤바 모양색상 변경*/
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  /* 드래그할수있는 스크롤바 손잡이*/
+  background-color: var(--color-scrollbar);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
+}
